@@ -1,0 +1,32 @@
+
+<div class="row d-flex justify-content-center">
+    <div id="sign-in-up" class="col-8 d-flex justify-content-around align-items-center">
+        <button id="sign-in-btn" type="submit">Sign In</button>
+        <button id="sign-up-btn" type="submit">Sign Up</button>
+    </div>
+</div>
+<div class="row d-flex justify-content-center">
+
+    <div id="sign-in-div" class="col justify-content-center" style="display:none!important">
+        <form class="login-form col-6 d-flex flex-column">
+            <input type="text" id="email-login" placeholder="email" />
+            <input type="password" id="password-login" placeholder="password" />
+            <button type="submit">login</button>
+            <a href="/login">...back</a>
+
+        </form>
+    </div>
+
+    <div id="sign-up-div" class="col justify-content-center" style="display:none!important">
+        <form class="signup-form col-6 d-flex flex-column">
+            <input type="text" id="username-signup" placeholder="user name" />
+            <input type="text" id="email-signup" placeholder="email" />
+            <input type="password" id="password-signup" placeholder="password" />
+            <button type="submit">signup</button>
+            <a href="/login">...back</a>
+        </form>
+    </div>
+</div>
+
+
+<script src="/js/login.js"></script>

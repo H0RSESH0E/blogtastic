@@ -5,7 +5,7 @@ const exphbs = require('express-handlebars');
 const app = express();
 const PORT = process.env.PORT || 3333;
 const sequelize = require('./config/connection');
-const SequelizeStore = require('connnect-session-sequelize')(session.Store);
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
     secret: 'digitalDreams',
@@ -19,16 +19,16 @@ const sess = {
 
 app.use(session(sess));
 
-// const helpers = require('./utils/halpers');
+const helpers = require('./utils/helpers');
 
-// const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create({ helpers });
 
-// app.engine('handlebars', hbs.engine);
-// app.set('view engine', 'handlebars');
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'client')));
 
 app.use(require('./controllers/'));
 
