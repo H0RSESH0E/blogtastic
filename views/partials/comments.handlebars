@@ -1,4 +1,7 @@
+<br>
 <article class="comment">
-        <h5>{{content}}</h5>
-        <p>Comment by: {{user.username}} on {{format_date created_at}}</p>
+        <p id="comment-text">{{content}}</p>
+        <p class="minor-text">Comment by: {{user.username}} on {{format_date created_at}}</p>
+        <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+
 </article>

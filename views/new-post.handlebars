@@ -1,11 +1,15 @@
-  <form class="edit-post-form">
-    <div>
-      <input id="post-title" type="text"/>
+<div class="row justify-content-center">
+  <form class="edit-post-form col-8 d-flex flex-column justify-content-center">
 
-      <textarea id="post-content">Enter your post here.</textarea>
-    </div>
+    <input id="post-title" type="text" placeholder="Title"/>
+    <br>
+    <textarea id="post-content-textarea" placeholder="Enter content here." rows="10" cols="50"></textarea>
+    <br>
     <button type="submit" id="save-post-btn">Save post</button>
     <button type="button" id="delete-post-btn">Delete post</button>
   </form>
+</div>
+
+
 
 <script src="/js/new-post.js"></script>

@@ -1,6 +1,12 @@
 <article class="post">
     <div class="title">
-        <a href="/api/posts/{{id}}"><h3>{{title}}</h3></a>
-        <p>Created on: {{format_date created_at}}</p>
+        <a href="/api/posts/{{id}}">
+            <h4>{{title}}</h4>
+        </a>
+        <p class="minor-text">Created on: {{format_date created_at}}</p>
+        <a href="/dashboard/edit/{{post.id}}" class="minor-text edit-link">Edit post</a>
+        <br>
+        <br>
+        <br>
     </div>
 </article>

@@ -8,14 +8,9 @@
     --shadow: 2px 2px 4px #0f1031, 2px 2px 6px #0f116483, 2px 2px 7px #151ce09f;
 
     /* Backgrounds and borders */
-    --glass: #ffffff31;
+    --glass: #ffffff56;
 
-    /* UV Index Colours */
-    --uvLow: #289500;
-    --uvMod: #F7E400;
-    --uvHigh: #F85900;
-    --uvVHigh: #D80010;
-    --uvExt: #6B49C8;
+
 }
 
 @font-face {
@@ -23,10 +18,6 @@
     src: url('./AvenirLTStd-Roman.otf');
 }
 
-
-/* * {
-    border: 1px dotted yellow;
-} */
 html,
 body {
     height: 100vh;
@@ -47,10 +38,24 @@ body {
     background-size: cover; 
     background-repeat: repeat-y;
 }
+
+
 #header-row {
-    height: 8%;
     align-items: center;
-    margin-bottom: 2vh;
+    padding-bottom: 2vh;
+    padding-top: 0.5vh;
+}
+
+a {
+ color:rgb(152, 237, 252)
+}
+
+a:hover {
+    color:rgb(253, 0, 156)
+}
+
+a:active {
+    color:#0f1031
 }
 
 h1 {
@@ -58,10 +63,9 @@ h1 {
     font-weight: 800;
     text-shadow: var(--shadow);
 }
-
-#body-row {
-    height: 92%;
-    width: 100%;
+#overlay {
+    height: 92vh;
+    background-color: #bebff3b0;
 }
 
 header,
@@ -74,88 +78,14 @@ header,
     filter: opacity(1);
 }
 
-#search-form {
-    min-height: 95%;
-}
 
-#search-history-container {
-    height: auto;
-}
-
-#cityToSearch {
-    width: 95%;
-    height: 5vh;
-    margin: 0 auto;
-}
-
-.horiz-border {
-    border: 1px solid var(--glass);
-    margin: 1vh 0;
-}
-
-
-.uv-icon {
-    border-radius: 5px;
-    padding-left: 0.5vw;
-    padding-right: 0.5vw;
-}
-
-.uv-icon.low {
-    color: #fff;
-    background-color: var(--uvLow);
-}
-
-.uv-icon.mod {
-    color: rgb(0, 0, 0);
-    background-color: var(--uvMod);
-}
-
-.uv-icon.high {
-    color: rgb(0, 0, 0);
-    background-color: var(--uvHigh);
-}
-
-.uv-icon.vHigh {
-    color: #fff;
-    background-color: var(--uvVHigh);
-}
-
-.uv-icon.ext {
-    color: #fff;
-    background-color: var(--uvExt);
-}
-
-label {
-    align-self: center;
-}
-
-input {
-    text-align: center;
-    padding: 2.5vh;
-}
-
-.current-weather-icon {
-    height: 4rem;
-}
-
-.daily-card,
-.btn  {
-    margin: 1.2vh 0.5vw;
-}
-
-.daily-card {
-    font-size: 110%;
-    padding: 1vh 1vw;
-}
-
-#search-form {
-    margin: 0vw;
-    padding: 0.2vw;
-}
-
-#header-row {    
+#header-row, #overlay, #post-content, #comment-text {    
     background-color: var(--glass);
     backdrop-filter: blur(8px);
+}
+
+.minor-text {
+    font-size: smaller;
 }
 
 .five-day,
