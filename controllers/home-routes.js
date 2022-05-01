@@ -6,7 +6,7 @@ router.get('/', (req,res) => {
     console.log('----------------------- localhost:3333 -----------------------')
 
     Post.findAll({
-        attributes: ['id', 'title', 'content', 'user_id'],
+        attributes: ['id', 'title', 'content', 'user_id', 'created_at', 'updated_at'],
         include: [
             {
                 model: User,
