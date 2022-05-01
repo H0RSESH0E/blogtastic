@@ -1,6 +1,6 @@
 
-# blogtastic
-## An application by H0RSH0E  
+# Blogtastic
+## An application by H0RSESH0E  
 &nbsp;  
 [<img src='https://img.shields.io/badge/license-MIT License-blueviolet' alt="user avatar" height="20"/>](#license)  
 &nbsp;&nbsp;  
@@ -10,7 +10,7 @@
 ## Description  
 This Full Stack application creates a CMS-style blog site following the Model View Controller (MVC) paradigm.  It utilizes several node package manager modules including: Handlebars.js, Sequelize, MySQL2, Express, Express-session and bcrypt.  
 &nbsp;  
-<img src="./assets/images/screenshot.png" alt="blogtastic application screenshot" width="600"/>    
+<img src="./client/images/screenshot.png" alt="blogtastic application screenshot" width="600"/>    
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)   
 &nbsp;  
 ## Installation

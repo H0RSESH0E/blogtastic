@@ -1,14 +1,20 @@
-<h1>POST EDIT</h1>
- <form class="edit-post-form">
-    <div id="art" data-post-id="{{post.id}}">
-      <input id="post-title" type="text" value="{{post.title}}" />
-      <textarea id="post-content">{{post.content}}</textarea>
-    </div>
+
+<div class="row justify-content-center">
+  <form class="edit-post-form col-8 d-flex flex-column justify-content-center">
+  <div id="art" data-post-id="{{post.id}}">
+    <input id="post-title" type="text" value="{{post.title}}" />
+    <br>
+    <br>
+    <textarea id="post-content" rows="10" cols="50">{{post.content}}</textarea>
+    <br>
     <div>
-       Originally created on {{format_date post.created_at}}
+      Originally created on {{format_date post.created_at}}
     </div>
     <button type="submit" id="save-post-btn">Save post</button>
     <button type="button" id="delete-post-btn">Delete post</button>
   </form>
+</div>
 
-  <script src="/js/dashboard.js"></script>
+
+
+<script src="/js/dashboard.js"></script>
