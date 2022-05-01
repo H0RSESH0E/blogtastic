@@ -1,8 +1,30 @@
 <h1>FUN!</h1>
-<article class="post">
+<article id="art" class="post" data-post-id="{{post.id}}">
     <div class="title">
         <h3>{{post.title}}</h3>
         <p>{{post.content}}</p>
         <p>Written by {{post.user.username}} on: {{format_date post.created_at}}</p>
     </div>
 </article>
+
+{{#each post.comments as |comment|}}
+
+    {{> comments comment }}
+  <br>
+  {{/each}}
+
+{{#if loggedIn}}
+<form class="comment-form">
+  <div>
+    <textarea id="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">add comment</button>
+  </div>
+</form>
+
+
+{{/if}}
+
+<script src="/js/comment.js"></script>

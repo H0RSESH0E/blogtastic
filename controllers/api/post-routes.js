@@ -72,6 +72,49 @@ router.post('/', ({body, session}, res) => {
       });
   });
   
-  
+  router.put('/:id', validate, ({body, params}, res) => {
+    Post.update(
+      {
+        title: body.postTitle,
+        content: body.postContent
+      },
+      {
+        where: {
+          id: params.id
+        }
+      }
+    )
+      .then(dbPostData => {
+        if (!dbPostData) {
+          res.status(404).json({ message: 'No post found with this id' });
+          return;
+        }
+        res.json(dbPostData);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
+  router.delete('/:id', validateLogin, (req, res) => {
+    Post.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+        .then(dbPostData => {
+            if (!dbPostData) {
+                res.status(404).json({ message: 'No post found with this id' });
+                return;
+            }
+            res.json(dbPostData);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
 
   module.exports = router;

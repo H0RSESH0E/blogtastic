@@ -1,7 +1,23 @@
 <h1>This is DASHBOARD</h1>
 
+
+
 <form action="/dashboard/new-post">
     <input type="submit" value="Write a New Post" />
 </form>
 
+
+{{#if plainData.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each plainData as |post|}}
+    <li>
+      {{> post-partial post}}
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
 <script src="/js/dashboard.js"></script>
