@@ -1,7 +1,7 @@
 <h3>Dashboard</h3>
 <br>
 <form action="/dashboard/new-post">
-    <input type="submit" value="Write a New Post" />
+  <input type="submit" value="Write a New Post" />
 </form>
 <br>
 {{#if plainData.length}}
@@ -11,6 +11,11 @@
     {{#each plainData as |post|}}
     <li>
       {{> post-partial post}}
+      <a href="/dashboard/edit/{{post.id}}" class="minor-text edit-link">Edit post</a>
+      <br>
+      <br>
+      <br>
+
     </li>
     {{/each}}
   </ul>
