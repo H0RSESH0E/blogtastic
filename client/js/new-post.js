@@ -4,7 +4,7 @@ async function saveHandler(event) {
   console.log('SAVE POST BTN HIT');
 
     const postTitle = document.querySelector('#post-title').value;
-    const postContent = document.querySelector('#post-content').value;
+    const postContent = document.querySelector('#post-content-textarea').value;
   
     const response = await fetch(`/api/posts`, {
       method: 'POST',
@@ -27,4 +27,3 @@ async function saveHandler(event) {
 
 document.querySelector('#save-post-btn').addEventListener('click', saveHandler);
 
-// document.querySelector('#delete-post-btn').addEventListener('click', deleteHandler);
